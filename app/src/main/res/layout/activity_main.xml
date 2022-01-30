@@ -35,6 +35,14 @@
         app:layout_constraintTop_toBottomOf="@id/searchEditText"
         android:text="@string/to_details" />
 
+    <Button
+        android:id="@+id/searchActivityButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin"
+        app:layout_constraintTop_toBottomOf="@id/toDetailsActivityButton"
+        android:text="@string/searchCaption" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"

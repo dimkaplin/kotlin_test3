@@ -76,6 +76,20 @@ class MainActivity : AppCompatActivity(), ViewContract  {
             }
             false
         })
+        binding.searchActivityButton.setOnClickListener {
+
+                val query = binding.searchEditText.text.toString()
+                if (query.isNotBlank()) {
+                    presenter.searchGitHub(query)
+                } else {
+                    Toast.makeText(
+                        this@MainActivity,
+                        getString(R.string.enter_search_word),
+                        Toast.LENGTH_SHORT
+                    ).show()
+                }
+
+        }
     }
 
     override fun displaySearchResults(
